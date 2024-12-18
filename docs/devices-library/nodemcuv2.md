@@ -1,0 +1,15 @@
+---
+layout: devices-library-article
+title: How to connect NodeMCU V2 to Klyff?
+category: Microcontrollers
+chip: ESP8266
+connectivity: HTTP, MQTT, WIFI
+vendor: NodeMCU
+deviceImageFileName: nodemcuv2.jpg
+---
+
+* TOC
+{:toc}
+
+{% include get-hosts-name.html %}
+{% include /docs/devices-library/guides/nodemcuv2.md %}

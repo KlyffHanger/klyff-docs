@@ -1,0 +1,80 @@
+bigheader: "Klyff Edge Documentation"
+abstract: "Distribute data processing and analysis using edge computing."
+toc:
+- title: Klyff Edge
+  path: /docs/edge/
+- title: What is Klyff Edge?
+  path: /docs/edge/getting-started-guides/what-is-edge/
+- title: Key concepts
+  section:
+    - title: Edge
+      path: /docs/edge/config/management/
+    - title: Comparing Edge and Cloud
+      path: /docs/edge/comparison/
+    - title: Alarms
+      path: /docs/edge/user-guide/alarms/
+    - title: OTA updates
+      path: /docs/edge/user-guide/ota-updates/
+- title: Dashboards
+  section:
+    - title: Overview
+      path: /docs/edge/user-guide/db-overview/
+- title: Configuration Guides
+  section:
+    - title: Device Creation and Cloud Provisioning
+      path: /docs/edge/config/create-device/
+#    - title: Provision Asset from cloud to edge
+#      path: /docs/edge/config/provision-asset/
+#    - title: Provision Entity View from cloud to edge
+#      path: /docs/edge/config/provision-entity-view/
+#    - title: Provision Dashboard from cloud to edge
+#      path: /docs/edge/config/provision-dashboard/
+#    - title: Provision User from cloud to edge
+#      path: /docs/edge/config/provision-user/
+#    - title: Provision Customer from cloud to edge
+#      path: /docs/edge/config/provision-customer/
+    - title: Bidirectional Attribute Subscription and Update with Post-Processing
+      path: /docs/edge/config/subscribe-to-attribute/
+- title: Rule Engine
+  section:
+    - title: Rule Chain Templates
+      path: /docs/edge/rule-engine/rule-chain-templates/
+    - title: Queues
+      path: /docs/edge/rule-engine/queues/
+- title: Integrations
+  pe: true
+  section:
+  - title: Overview
+    path: /docs/pe/edge/user-guide/integrations/
+  - title: Remote Integrations
+    path: /docs/pe/edge/user-guide/integrations/remote-integrations/
+  - title: HTTP
+    path: /docs/pe/edge/user-guide/integrations/http/
+  - title: MQTT
+    path: /docs/pe/edge/user-guide/integrations/mqtt/
+  - title: CoAP
+    path: /docs/pe/edge/user-guide/integrations/coap/
+  - title: OPC-UA
+    path: /docs/pe/edge/user-guide/integrations/opc-ua/
+  - title: TCP
+    path: /docs/pe/edge/user-guide/integrations/tcp/
+  - title: UDP
+    path: /docs/pe/edge/user-guide/integrations/udp/
+- title: Security
+  section:
+    - title: Edge over TLS/SSL 
+      path: /docs/edge/user-guide/grpc-over-ssl/
+- title: Use Cases
+  section:
+    - title: Overview
+      path: /docs/edge/use-cases/overview/
+    - title: Manage alarms and RPC requests on edge devices
+      path: /docs/edge/use-cases/manage-alarms-rpc-requests/
+    - title: Data filtering and traffic reduce
+      path: /docs/edge/use-cases/data-filtering-traffic-reduce/
+- title: Troubleshooting
+  path: /docs/edge/user-guide/troubleshooting/
+- title: Release Notes
+  path: /docs/edge/releases/
+- title: Roadmap
+  path: /docs/edge/roadmap/

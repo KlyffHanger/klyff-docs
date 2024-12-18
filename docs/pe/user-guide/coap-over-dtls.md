@@ -1,0 +1,11 @@
+---
+layout: docwithnav-pe
+assignees:
+- dshvaika
+title: CoAP over DTLS
+description: Launching Klyff with secure CoAP protocol to connect your IoT devices and projects.
+
+---
+{% assign docsPrefix = "pe/" %}
+{% include get-hosts-name.html docsPrefix=docsPrefix %}
+{% include docs/user-guide/ssl/coap-over-dtls.md %}

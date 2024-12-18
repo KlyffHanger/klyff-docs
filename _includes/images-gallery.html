@@ -1,0 +1,24 @@
+{% if include.showListImageTitles %}
+<ul>
+    {% for image in page[include.imageCollection] %}
+    <li> {{image[1].title}} </li>
+    {% endfor %}
+</ul>
+{% endif %}
+<div itemscope itemtype="https://schema.org/ImageGallery" class="images-gallery" style="justify-content: {{ include.align | default: 'start'}};">
+    {% for image in page[include.imageCollection] %}
+        <figure itemprop="associatedMedia" itemscope itemtype="https://schema.org/ImageObject" style="max-width: min({{ include.max-width | default: '225px'}}, 100%);
+                max-height: min({{ include.max-height | default: '225px'}}, 100%);"
+            {% if page[include.imageCollection].size > 1 %} class="list-item"{% endif %}>
+            {% assign modifiedString = image[1].title | replace: "'", "&#39;" %}
+            <a href="{{image[1].image}}" itemprop="contentUrl">
+                {% if include.preview == "false" %}
+                <img src="{{image[1].image}}" itemprop="thumbnail"  alt='{{modifiedString | remove: "*"}}' />
+                {% else %}
+                <img src="{{image[1].image | split: "" | reverse | join: "" | replace_first: ".", ".weiverp-" | split: "" | reverse | join: ""}}" itemprop="thumbnail"  alt='{{modifiedString | remove: "*"}}' />
+                {% endif %}
+            </a>
+            <figcaption itemprop="caption description">{{modifiedString}}</figcaption>
+        </figure>
+    {% endfor %}
+</div>

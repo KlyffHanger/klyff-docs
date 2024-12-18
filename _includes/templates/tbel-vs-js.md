@@ -1,0 +1,2 @@
+One can use either [TBEL](/docs/{{docsPrefix}}user-guide/tbel/) (Klyff expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [TBEL](/docs/{{docsPrefix}}user-guide/tbel/) as it's execution in Klyff is much more efficient compared to JS.

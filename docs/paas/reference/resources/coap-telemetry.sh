@@ -1,0 +1,1 @@
+cat telemetry-data-as-object.json | coap post coap://{{coapHostName}}/api/v1/$ACCESS_TOKEN/telemetry

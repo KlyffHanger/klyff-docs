@@ -1,0 +1,55 @@
+bigheader: "Installation"
+abstract: "Documentation for installation and configuration of Klyff Professional Edition IoT Platform."
+toc:
+- title: Installation options
+  path: /docs/user-guide/install/pe/installation-options/
+- title: On premise
+  section:  
+  - title: Ubuntu Server
+    path: /docs/user-guide/install/pe/ubuntu/
+  - title: CentOS/RHEL Server
+    path: /docs/user-guide/install/pe/rhel/
+  - title: Windows
+    path: /docs/user-guide/install/pe/windows/
+  - title: Docker (Linux or Mac OS)
+    path: /docs/user-guide/install/pe/docker/
+  - title: Docker (Windows)
+    path: /docs/user-guide/install/pe/docker-windows/
+  - title: Cluster setup
+    path: /docs/user-guide/install/pe/cluster-setup/
+- title: Cloud
+  section:
+  - title: AWS
+    path: /docs/user-guide/install/pe/aws/
+  - title: Azure
+    path: /docs/user-guide/install/pe/azure/
+  - title: DigitalOcean
+    path: /docs/user-guide/install/pe/digital-ocean/
+  - title: Google Cloud Platform
+    path: /docs/user-guide/install/pe/gcp/
+  - title: IBM Cloud
+    path: /docs/user-guide/install/pe/ibm-cloud/
+  - title: Alibaba Cloud
+    path: /docs/user-guide/install/pe/alibaba-cloud/
+- title: Configuration
+  section:
+  - title: How to change configuration parameters?
+    path: /docs/user-guide/install/pe/how-to-change-config/
+  - title: Core/Rule engine deployment parameters
+    path: /docs/user-guide/install/pe/config/
+  - title: HTTP Transport parameters
+    path: /docs/user-guide/install/pe/http-transport-config/
+  - title: MQTT Transport parameters
+    path: /docs/user-guide/install/pe/mqtt-transport-config/
+  - title: CoAP Transport parameters
+    path: /docs/user-guide/install/pe/coap-transport-config/
+  - title: LWM2M Transport parameters
+    path: /docs/user-guide/install/pe/lwm2m-transport-config/
+  - title: SNMP Transport parameters
+    path: /docs/user-guide/install/pe/snmp-transport-config/
+  - title: Version control executor parameters
+    path: /docs/user-guide/install/pe/vc-executor-config/
+  - title: Integration executor parameters
+    path: /docs/user-guide/install/pe/ie-executor-config/
+- title: Upgrade instructions
+  path: /docs/user-guide/install/pe/upgrade-instructions/

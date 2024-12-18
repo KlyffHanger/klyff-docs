@@ -1,0 +1,6 @@
+bigheader: "Getting Started"
+abstract: "Getting Started with Klyff PE Edge."
+hidetoc: "true"
+toc:
+  - title: Getting Started
+    path: /docs/pe/edge/getting-started/

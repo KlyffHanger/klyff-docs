@@ -1,0 +1,1 @@
+mqtt sub -v -h "demo.thingsboard.io" -t "v1/devices/me/attributes" -u '$ACCESS_TOKEN'

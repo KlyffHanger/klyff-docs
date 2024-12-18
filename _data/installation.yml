@@ -1,0 +1,53 @@
+bigheader: "Installation"
+abstract: "Documentation for installation and configuration of Klyff IoT Platform."
+toc:
+- title: Installation options
+  path: /docs/user-guide/install/installation-options/
+- title: On premise
+  section:
+  - title: Ubuntu Server
+    path: /docs/user-guide/install/ubuntu/
+  - title: CentOS/RHEL Server
+    path: /docs/user-guide/install/rhel/
+  - title: Windows
+    path: /docs/user-guide/install/windows/
+  - title: Raspberry Pi
+    path: /docs/user-guide/install/rpi/
+  - title: Docker (Windows)
+    path: /docs/user-guide/install/docker-windows/
+  - title: Docker (Linux or Mac OS)
+    path: /docs/user-guide/install/docker/
+  - title: Building from sources
+    path: /docs/user-guide/install/building-from-source/
+  - title: Cluster setup
+    path: /docs/user-guide/install/cluster-setup/
+- title: Cloud
+  section:
+  - title: AWS
+    path: /docs/user-guide/install/aws/
+  - title: DigitalOcean
+    path: /docs/user-guide/install/digital-ocean/
+  - title: Google Cloud Platform
+    path: /docs/user-guide/install/gcp/
+  - title: Azure
+    path: /docs/user-guide/install/azure/
+- title: Configuration
+  section:
+  - title: How to change configuration parameters?
+    path: /docs/user-guide/install/how-to-change-config/
+  - title: Core/Rule engine deployment parameters
+    path: /docs/user-guide/install/config/
+  - title: HTTP Transport parameters
+    path: /docs/user-guide/install/http-transport-config/
+  - title: MQTT Transport parameters
+    path: /docs/user-guide/install/mqtt-transport-config/
+  - title: CoAP Transport parameters
+    path: /docs/user-guide/install/coap-transport-config/
+  - title: LWM2M Transport parameters
+    path: /docs/user-guide/install/lwm2m-transport-config/
+  - title: SNMP Transport parameters
+    path: /docs/user-guide/install/snmp-transport-config/
+  - title: Version control executor parameters
+    path: /docs/user-guide/install/vc-executor-config/
+- title: Upgrade instructions
+  path: /docs/user-guide/install/upgrade-instructions/

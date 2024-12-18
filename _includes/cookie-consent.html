@@ -1,0 +1,108 @@
+<style>
+    #cookie-notice {
+        padding: 1.5rem 1.5rem;
+        display: none;
+        text-align: start;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        z-index: 999;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(15, 22, 29, 0.85);
+        color: rgba(255, 255, 255, 1);
+    }
+
+    #cookie-notice-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 65%;
+    }
+
+    #cookie-notice-close {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        color: #fff;
+    }
+
+    #cookie-notice-close i {
+        font-size: 20px;
+    }
+
+    #cookie-notice-text span {
+        font-size: 14px;
+    }
+
+    #cookie-notice-text label {
+        font-size: 20px;
+    }
+
+    #cookie-notice #cookie-notice-accept {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        cursor: pointer;
+        margin-left: 3.5rem;
+        height: 40px;
+        font-size: 18px;
+        width: 140px;
+    }
+
+    @media (max-width: 767px) {
+        #cookie-notice {
+            flex-direction: column;
+            padding: 1.3rem 1.1rem;
+        }
+
+        #cookie-notice-text {
+            width: 100%;
+        }
+
+        #cookie-notice #cookie-notice-accept {
+            margin-top: 1.3rem;
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+</style>
+<div id="cookie-notice">
+    <div id="cookie-notice-text">
+        <label>Cookie policy</label>
+        <span>We use cookies to improve user experience. By continuing to browse this site, you agree the use of cookies, in accordance with our <a
+                href="/cookie-policy/" target="_blank">cookie policy.</a><span class=""></span>
+        </span>
+    </div>
+    <button id="cookie-notice-accept" class="btn btn-primary btn-sm">Accept</button>
+    <button id="cookie-notice-close">
+        <i class="fa fa-times"></i>
+    </button>
+</div>
+<script>
+    function readCookieValue(value) {
+        if (value[0] === '"') {
+            value = value.slice(1, -1)
+        }
+        return value.replace(/(%[\dA-F]{2})+/gi, decodeURIComponent)
+    }
+
+    function writeCookieValue(value) {
+        return encodeURIComponent(value).replace(
+            /%(2[346BF]|3[AC-F]|40|5[BDE]|60|7[BCD])/g,
+            decodeURIComponent
+        )
+    }
+
+    function closeAndAccept() {
+        setCookie('cookie-notice-dismissed', 'true', {expires: 365, path: '/'});
+        document.getElementById('cookie-notice').style.display = 'none';
+    }
+
+    if (getCookie('cookie-notice-dismissed') !== 'true') {
+        document.getElementById('cookie-notice').style.display = 'flex';
+    }
+
+    document.getElementById('cookie-notice-accept').addEventListener("click", closeAndAccept);
+    document.getElementById('cookie-notice-close').addEventListener("click", closeAndAccept);
+</script>

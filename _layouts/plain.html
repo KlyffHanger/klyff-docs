@@ -1,0 +1,79 @@
+<!Doctype html>
+<html id="plain">
+{% if page.title %}{% assign title=page.title %}{% endif %}
+{% if page.description %}{% assign description=page.description %}{% endif %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if page.customTitle == "true" %}
+    <title>{{ title }}</title>
+    {% seo title=false %}
+    {% else %}
+    {% seo %}
+    {% endif %}
+    {% if description %}
+    <meta name="twitter:description" content="{{ description }}">
+    {% endif %}
+    {% if page.no_canonical != true %}<link rel="canonical" href="https://thingsboard.io{{page.url}}">{% endif %}
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+    <script type="text/javascript">
+        function _gaLt(event) {
+            /* If GTM is blocked or not loaded, or not main|middle|touch click then don't track */
+            if (checkGTagDataLayer() || (event.which != 1 && event.which != 2)) {
+                return;
+            }
+            var el = event.srcElement || event.target;
+
+            while (el && (typeof el.tagName == 'undefined' || el.tagName.toLowerCase() != 'a' || !el.href)) {
+                el = el.parentNode;
+            }
+            if (el && el.href && el.getAttribute('itemprop') !== 'contentUrl') {
+                var link = el.href;
+                if ((link.indexOf(location.host) == -1 || link.indexOf('.' + location.host) > 0) && !link.match(/^javascript\:/i)) {
+                    var target = (el.target && !el.target.match(/^_(self|parent|top)$/i)) ? el.target : false;
+                    if (event.ctrlKey || event.shiftKey || event.metaKey || event.which == 2) {
+                        target = "_blank";
+                    }
+
+                    var hbrun = false; // tracker has not yet run
+                    var hitBack = function() {
+                        if (hbrun) return;
+                        hbrun = true;
+                        window.location.href = link;
+                    };
+
+                    if (target) {
+                        gtag("event", "outgoing_links", {
+                            "event_category": "Outgoing Links",
+                            "event_label": link,
+                            "value": document.location.pathname + document.location.search
+                        });
+                    } else {
+                        event.preventDefault ? event.preventDefault() : event.returnValue = !1;
+                        gtag("event", "outgoing_link", {
+                            "event_category": "Outgoing Links",
+                            "event_label": link,
+                            "value": document.location.pathname + document.location.search,
+                            "event_callback": hitBack
+                        });
+
+                        setTimeout(hitBack, 1000);
+                    }
+                }
+            }
+        }
+
+        var _w = window;
+        var _gaLtEvt = ("ontouchstart" in _w) ? "click" : "mousedown";
+        _w.addEventListener ? _w.addEventListener("load", function() {document.body.addEventListener(_gaLtEvt, _gaLt, !1)}, !1)
+                : _w.attachEvent && _w.attachEvent("onload", function() {document.body.attachEvent("on" + _gaLtEvt, _gaLt)});
+    </script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TGBNQXN');
+    function gtag(){dataLayer.push(arguments)};
+    </script>
+</head>
+{{ content }}

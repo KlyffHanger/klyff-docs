@@ -1,0 +1,47 @@
+$main-max-width: 1200px
+
+@media screen and (min-width: 1025px)
+
+	header
+		.logo
+			width: 180px
+			height: 60px
+
+	#mainNav
+		.nav-box
+			padding: 0 20px
+		main
+			&#headNav
+				h3
+					font-size: 28px
+					line-height: 36px
+
+	section, header, footer
+		main, div.main-div
+			max-width: $main-max-width
+
+	#video
+		width: $main-max-width
+		position: relative
+
+	// FOOTER
+	footer
+		width: 100%
+		padding-left: 30px
+		padding-right: 30px
+		nav
+			overflow: hidden
+
+	.social a
+		span
+			position: absolute
+			display: block
+			height: 0
+			overflow: hidden
+
+@media screen and (min-width: 1500px)
+	footer
+		padding-left: 100px
+		padding-right: 100px
+		main, div.main-div
+			max-width: 1400px!important

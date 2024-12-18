@@ -1,0 +1,373 @@
+/* Default gh-pages-blog css from https://github.com/thedereck/gh-pages-blog/blob/master/css/syntax.css */
+code
+	color: #eb5757
+
+.highlight br
+	display: none
+
+.highlight
+	background: #ffffff
+
+.highlighter-rouge
+	position: relative
+	&[class*="expandable"]
+		pre.highlight
+			margin-bottom: 45px
+		button.expand-code-btn
+			position: absolute
+			bottom: -33px
+			right: 0
+			left: 0
+			margin-right: auto
+			margin-left: auto
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			color: #2a7dec
+			width: 130px
+			height: 30px
+			outline: none
+
+			.arrow
+				width: 0
+				height: 0
+				border-left: 20px solid transparent
+				border-right: 20px solid transparent
+				border-top: 13px solid #2a7dec
+
+			.collapse
+				display: none
+				margin-top: 0 !important
+
+		&[data-expanded="true"]
+			pre.highlight
+				height: max-content !important
+			button.expand-code-btn
+				.arrow
+					border-top: none
+					border-bottom: 13px solid #2a7dec
+				.collapse
+					display: block
+				.expand
+					display: none
+
+
+		&[data-expanded="false"]
+			button.expand-code-btn
+				.arrow
+					border-bottom: none
+					border-top: 13px solid #2a7dec
+
+div.highlight
+	margin-top: 12px
+	margin-bottom: 32px
+	pre
+		margin-bottom: 0
+	pre.highlight
+		border: 1px solid rgba(42,125,236,0.2)
+		border-radius: 4px
+		table.rouge-table
+			border: none
+			border-spacing: 0
+			table-layout: auto
+			td
+				line-height: 28px
+				vertical-align: top
+			td.rouge-gutter
+				position: sticky
+				left: 0
+				padding: 8px 12px 8px 18px
+				text-align: right
+				background: #f9fbff
+				pre
+					color: rgba(33, 37, 41, 0.6)
+			td.rouge-code
+				padding: 8px 16px
+				pre
+					width: max-content
+
+.highlight code span, code, pre code, pre
+	font-family: $mono-font
+	font-size: 16px
+
+.highlight .c
+	color: #999988
+	font-style: italic
+
+.highlight .err
+	color: #a61717
+	background-color: #e3d2d2
+
+.highlight .k
+	color: #2a7dec
+
+.highlight .o
+	font-weight: normal
+
+.highlight .cm
+	color: #999988
+	font-style: italic
+
+.highlight .cp
+	color: #999999
+	font-weight: bold
+
+.highlight .c1
+	color: #999988
+	font-style: italic
+.highlight .cs
+	color: #999999
+	font-weight: bold
+	font-style: italic
+
+.highlight .gd
+	color: #000000
+	background-color: #ffdddd
+
+.highlight .gd .x
+	color: #000000
+	background-color: #ffaaaa
+
+.highlight .ge
+	font-style: italic
+
+.highlight .gr
+	color: #aa0000
+
+.highlight .gh
+	color: #999999
+
+.highlight .gi
+	color: #000000
+	background-color: #ddffdd
+
+.highlight .gi .x
+	color: #000000
+	background-color: #aaffaa
+
+.highlight .go
+	color: #888888
+
+.highlight .gp
+	color: #555555
+
+.highlight .gs
+	font-weight: bold
+
+.highlight .gu
+	color: #aaaaaa
+
+.highlight .gt
+	color: #aa0000
+
+.highlight .kc
+	font-weight: normal
+
+.highlight .kd
+	font-weight: bold
+
+.highlight .kp
+	font-weight: bold
+
+.highlight .kr
+	font-weight: bold
+
+.highlight .kt
+	color: #445588
+	font-weight: bold
+
+.highlight .m
+	color: #2a7dec
+
+.highlight .s
+	color: #eb5757
+
+.highlight .na
+	color: #212529
+
+.highlight .nb
+	color: #2a7dec
+
+.highlight .nc
+	color: #445588
+	font-weight: bold
+
+.highlight .no
+	color: #008080
+
+.highlight .ni
+	color: #800080
+
+.highlight .ne
+	color: #990000
+	font-weight: bold
+
+.highlight .nf
+	color: #990000
+	font-weight: bold
+
+.highlight .nn
+	color: #555555
+
+.highlight .nt
+	color: #212529
+
+.highlight .nv
+	color: #2a7dec
+
+.highlight .ow
+	font-weight: bold
+
+.highlight .w
+	color: #bbbbbb
+
+.highlight .mf
+	color: #2a7dec
+
+.highlight .mh
+	color: #009999
+
+.highlight .mi
+	color: #2a7dec
+
+.highlight .mo
+	color: #009999
+
+.highlight .sb
+	color: #eb5757
+
+.highlight .sc
+	color: #eb5757
+
+.highlight .sd
+	color: #eb5757
+
+.highlight .s2
+	color: #eb5757
+
+.highlight .se
+	color: #eb5757
+
+.highlight .sh
+	color: #eb5757
+
+.highlight .si
+	color: #eb5757
+
+.highlight .sx
+	color: #eb5757
+
+.highlight .sr
+	color: #009926
+
+.highlight .s1
+	color: #eb5757
+
+.highlight .ss
+	color: #990073
+
+.highlight .bp
+	color: #999999
+
+.highlight .vc
+	color: #008080
+
+.highlight .vg
+	color: #008080
+
+.highlight .vi
+	color: #008080
+
+.highlight .il
+	color: #009999
+
+#docs
+	.copy-code
+		pre.highlight
+			position: relative
+			display: grid
+			& > button.clipboard-btn, & > code
+				grid-row: 1
+				grid-column: 1
+		.highlight
+			background: none!important
+			.customTooltip
+				display: none
+				position: absolute
+				width: calc(100% - 2px)
+				height: calc(100% - 2px)
+				top: 1px
+				left: 1px
+				border-radius: 4px
+				background: rgba(255, 255, 255, 0.55)
+				.tooltipText
+					bottom: calc(50% - 18px)
+					left: calc(50% - 54px)
+					position: absolute
+					text-align: center
+					margin-left: auto
+					margin-right: auto
+					border-radius: 4px
+					color: white
+					background: #212529
+					padding: 8px 22px
+			&.showTool .customTooltip
+				display: block
+			.rouge-code pre
+				padding-right: 32px
+		position: relative
+		button.clipboard-btn
+			pointer-events: none
+			outline: none
+			position: sticky
+			img
+				width: 18px
+				height: 18px
+				filter: invert(51%) sepia(6%) saturate(172%) hue-rotate(177deg) brightness(94%) contrast(92%)
+			height: 46px
+			width: 206px
+			left: calc(100% - 206px)
+			top: 0
+			background: none
+			-webkit-user-select: none
+			-moz-user-select: none
+			-ms-user-select: none
+			user-select: none
+			p
+				padding: 10px
+				top: 1px
+				transition: 0.2s
+				color: #2a7dec
+				background: rgba(255,255,255,0.85)
+				backdrop-filter: blur(4px)
+				opacity: 0
+				font-weight: 500
+				right: 32px
+				position: absolute
+			div
+				background-color: #fff
+				position: absolute
+				width: 38px
+				height: 38px
+				top: 0
+				right: 0
+				padding: 10px
+				img
+					position: initial
+		&:hover
+			cursor: pointer
+			div.highlight
+				pre.highlight
+					border: solid 1px #2A7DEC
+			button.clipboard-btn
+				p
+					opacity: 1
+				img
+					filter: invert(49%) sepia(97%) saturate(3730%) hue-rotate(200deg) brightness(95%) contrast(95%)
+		&:active
+			button.clipboard-btn
+				p
+					opacity: 0
+				img
+					filter: invert(51%) sepia(6%) saturate(172%) hue-rotate(177deg) brightness(94%) contrast(92%)

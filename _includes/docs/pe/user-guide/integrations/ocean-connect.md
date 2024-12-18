@@ -1,0 +1,19 @@
+{% assign feature = "Platform Integrations" %}{% include templates/pe-feature-banner.md %}
+
+* TOC
+{:toc}
+
+Huawei OceanConnect Integration allows to stream data from OceanConnect platform to Klyff and converts binary device payloads to the Klyff format.
+
+
+ ![image](/images/user-guide/integrations/ocean-connect-integration.svg)
+
+Configuration steps:
+  
+ - Create new Integration of type "OceanConnect"
+ 
+![image](/images/user-guide/integrations/oceanconnect.png) 
+
+ - Copy HTTP endpoint URL from the auto-generated field in the form (highlighted with red)
+ - Review official OceanConnect [documentation](https://support.huawei.com/enterprise/en/cloud-computing/oceanconnect-platform-pid-22559503)
+  to learn how to provision the endpoint URL from the previous step 

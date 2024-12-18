@@ -1,0 +1,33 @@
+{% assign contentToggleId = include.content-toggle-id %}
+{% assign toggleraw = include.toggle-spec | split: '%br%' %}
+
+<div class="tb-content-toggle" id="{{contentToggleId}}">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            {% for content in toggleraw %}
+            {% assign thisContent = content | split: '%,%' %}
+            {% assign buttonText=thisContent[0] | strip %}
+            {% assign toggleName=thisContent[1] %}
+            <a class="content-toggle-button" data-target="#{{toggleName}}">
+                <div class="content-toggle-button-text">
+                    {{buttonText}}
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        {% for content in toggleraw %}
+        {% assign thisContent = content | split: '%,%' %}
+        {% assign toggleName=thisContent[1] %}
+        {% assign togglePath=thisContent[2] %}
+        {% capture toggleText %}{% include {{togglePath}} %}{% endcapture %}
+        <div id="{{toggleName}}" class="panel-collapse collapse">
+            <div class="panel-body">
+                {% capture noTocText %}
+                    {% include disable-toc.html content=toggleText %}
+                {% endcapture %}
+                <table><tr><td>{{ noTocText | markdownify }}</td></tr></table>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

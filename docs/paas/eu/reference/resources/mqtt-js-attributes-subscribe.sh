@@ -1,0 +1,1 @@
+mqtt sub -v -h "{{mqttHostName}}" -t "v1/devices/me/attributes" -u '$ACCESS_TOKEN'
