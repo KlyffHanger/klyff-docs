@@ -1,0 +1,8 @@
+{
+  "plugins": ["include-markdown"],
+  "pluginsConfig": {
+    "include-markdown": {
+      "baseDir": "_include"
+    }
+  }
+}
