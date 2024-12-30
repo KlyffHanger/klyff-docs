@@ -1,19 +1,19 @@
-title: ThingsBoard
-name: ThingsBoard
-author: thingsboard
-logo: /images/thingsboard_logo.png
-url: https://thingsboard.io
+title: Klyff
+name: Klyff
+author: klyff development team
+logo: /images/klyff_final_logo.svg
+url: https://klyff.com
 
 twitter:
-  username: thingsboard
+  username: klyff
 
 social:
-  name: ThingsBoard
+  name: klyff
   links:
-    - https://twitter.com/thingsboard
+    - https://twitter.com/klyff
     - https://github.com/thingsboard/thingsboard
-    - https://www.facebook.com/thingsboard
-    - https://www.youtube.com/channel/thingsboard
+    - https://www.facebook.com/klyff
+    - https://www.youtube.com/channel/klyff
 
 seo:
   type: WebSite
@@ -50,9 +50,9 @@ defaults:
       path: ""
     values:
       image:
-        path: /images/thingsboard_logo.png
-        twitter: /images/thingsboard_logo.png
-        facebook: /images/thingsboard_logo.png
+        path: /images/klyff_final_logo.svg
+        twitter: /images/klyff_final_logo.svg
+        facebook: /images/klyff_final_logo.svg
       version: "v1.0"
       githubbranch: "master"
       docsbranch: "master"
