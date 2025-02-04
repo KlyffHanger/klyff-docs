@@ -1,7 +1,7 @@
 bigheader: "Klyff Documentation"
 abstract: "Documentation for using Klyff IoT Platform."
 toc:
-- title: Community Edition
+- title: Klyff Platform
   path: /docs/
 - title: What is Klyff?
   path: /docs/getting-started-guides/what-is-thingsboard/

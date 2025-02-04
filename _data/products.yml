@@ -1,21 +1,12 @@
-- title: Community Edition
-  fulltitle: Klyff Community Edition
+- title: Klyff Platform
+  fulltitle: Klyff Platform
   description: Klyff Documentation
   tag: ce
-  icon: /images/thingsboard-cm-icon.svg
+  icon: images/klyff_final_logo.svg
   path: /docs/
   guides: /docs/guides/
   getStarted: /docs/getting-started-guides/helloworld/
   docsPrefix: /docs/
-- title: Professional Edition
-  fulltitle: Klyff Professional Edition
-  description: Klyff Documentation
-  tag: pe
-  icon: /images/thingsboard-p-icon.svg
-  path: /docs/pe/
-  guides: /docs/pe/guides/
-  getStarted: /docs/pe/getting-started-guides/helloworld/
-  docsPrefix: /docs/pe/
 - title: Cloud
   fulltitle: Klyff Cloud
   description: Klyff Documentation
@@ -31,12 +22,6 @@
   tag: edge
   icon: /images/thingsboard-e-icon.svg
   path: /docs/edge/
-- title: PE Edge
-  fulltitle: Klyff PE Edge
-  description: Klyff PE Edge Documentation
-  tag: edge-pe
-  icon: /images/thingsboard-e-icon.svg
-  path: /docs/pe/edge/
 - title: IoT Gateway
   fulltitle: Klyff IoT Gateway
   description: Klyff Documentation
@@ -44,12 +29,6 @@
   icon: /images/gateway-icon.svg
   path: /docs/iot-gateway/
   getStarted: /docs/iot-gateway/getting-started/
-- title: License Server
-  fulltitle: Klyff License Server
-  description: Klyff Documentation
-  tag: license
-  icon: /images/license-icon.svg
-  path: /products/license-server/
 - title: Trendz Analytics
   fulltitle: Trendz Analytics
   description: Trendz Documentation
@@ -65,14 +44,6 @@
   path: /docs/mobile/
   docsPrefix: /docs/mobile/
   getStarted: /docs/mobile/getting-started/
-- title: PE Mobile Application
-  fulltitle: Klyff PE Mobile Application
-  description: PE Mobile Application Documentation
-  tag: mobile-pe
-  icon: /images/tb-pe-mobile-icon.svg
-  path: /docs/pe/mobile/
-  docsPrefix: /docs/pe/mobile/
-  getStarted: /docs/pe/mobile/getting-started/
 - title: MQTT Broker
   fulltitle: MQTT Broker
   description: MQTT Broker Documentation
